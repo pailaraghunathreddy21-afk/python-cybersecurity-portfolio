@@ -1,0 +1,13 @@
+{
+    "salt": "lirn1F3Ei2S6a7rpo24rVg==",
+    "password_check": {
+        "nonce": "9JvUixrV8wK5C+EL",
+        "ciphertext": "SnBUFuqAHjZ6H0bl1GbIlPOJlGHzTpAhk0EjaFsEP0P0W4QJjLpwvH2V5hyI1kz0"
+    },
+    "entries": {
+        "instagram.com": {
+            "nonce": "t6sr3C4B/1KPVBpf",
+            "ciphertext": "U/92ai1tXAwOx9l3FkWvfXnovUJlErKTQP0wF7BCVXuwSq4gpxF+T4wUW9YpQ57n4WQkcLzrTEqod7S07kpX+w3n2aF5sN4="
+        }
+    }
+}
