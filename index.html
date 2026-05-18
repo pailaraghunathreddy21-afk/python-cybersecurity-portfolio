@@ -1,489 +1,505 @@
+```html id="9bh0eu"
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paila Raghunath Reddy | Python Developer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>RAGHU | Internship Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #020617;
-            color: white;
-            overflow-x: hidden;
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#0f172a;
+            color:white;
+            overflow-x:hidden;
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: rgba(59, 130, 246, 0.2);
-            filter: blur(120px);
-            top: -100px;
-            left: -100px;
-            z-index: -1;
+        body::before{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            background:#2563eb;
+            filter:blur(180px);
+            top:-150px;
+            left:-150px;
+            opacity:0.4;
+            z-index:-1;
         }
 
-        body::after {
-            content: "";
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: rgba(139, 92, 246, 0.15);
-            filter: blur(120px);
-            bottom: -100px;
-            right: -100px;
-            z-index: -1;
+        body::after{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            background:#7c3aed;
+            filter:blur(180px);
+            bottom:-150px;
+            right:-150px;
+            opacity:0.4;
+            z-index:-1;
         }
 
-        .navbar {
-            width: 100%;
-            padding: 22px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            background: rgba(2, 6, 23, 0.75);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+        nav{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            padding:22px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:rgba(15,23,42,0.7);
+            backdrop-filter:blur(15px);
+            border-bottom:1px solid rgba(255,255,255,0.1);
+            z-index:1000;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            background: linear-gradient(to right, #38bdf8, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo{
+            font-size:30px;
+            font-weight:700;
+            color:#38bdf8;
+            letter-spacing:2px;
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #e2e8f0;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: 0.3s ease;
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
         }
 
-        .nav-links a:hover {
-            color: #38bdf8;
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            transition:0.3s;
+            font-weight:500;
         }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 120px 20px 60px;
+        nav ul li a:hover{
+            color:#38bdf8;
         }
 
-        .tag {
-            background: rgba(56, 189, 248, 0.12);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: #38bdf8;
-            padding: 10px 22px;
-            border-radius: 999px;
-            margin-bottom: 30px;
-            font-size: 14px;
-            letter-spacing: 1px;
+        header{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:120px 10%;
         }
 
-        .hero h1 {
-            font-size: 72px;
-            font-weight: 800;
-            line-height: 1.1;
-            max-width: 950px;
-            margin-bottom: 25px;
+        .hero{
+            display:grid;
+            grid-template-columns:1fr 450px;
+            gap:70px;
+            align-items:center;
         }
 
-        .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-text h3{
+            color:#38bdf8;
+            margin-bottom:15px;
+            letter-spacing:2px;
         }
 
-        .hero p {
-            max-width: 850px;
-            font-size: 20px;
-            line-height: 1.9;
-            color: #cbd5e1;
+        .hero-text h1{
+            font-size:75px;
+            line-height:1.1;
+            margin-bottom:25px;
         }
 
-        .hero-buttons {
-            margin-top: 45px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .hero-text p{
+            font-size:20px;
+            color:#cbd5e1;
+            line-height:1.9;
+            margin-bottom:40px;
         }
 
-        .btn {
-            text-decoration: none;
-            padding: 16px 34px;
-            border-radius: 16px;
-            font-weight: 600;
-            transition: 0.4s ease;
+        .buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
         }
 
-        .primary-btn {
-            background: linear-gradient(to right, #38bdf8, #8b5cf6);
-            color: white;
-            box-shadow: 0 10px 30px rgba(56,189,248,0.35);
+        .btn{
+            padding:16px 34px;
+            border-radius:14px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.3s;
         }
 
-        .primary-btn:hover {
-            transform: translateY(-6px) scale(1.03);
+        .primary{
+            background:linear-gradient(to right,#2563eb,#7c3aed);
+            color:white;
         }
 
-        .secondary-btn {
-            border: 1px solid rgba(255,255,255,0.15);
-            color: white;
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(12px);
+        .primary:hover{
+            transform:translateY(-5px);
         }
 
-        .secondary-btn:hover {
-            transform: translateY(-6px);
-            background: rgba(255,255,255,0.1);
+        .secondary{
+            border:1px solid rgba(255,255,255,0.15);
+            color:white;
+            background:rgba(255,255,255,0.05);
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            width: 100%;
-            max-width: 1100px;
-            margin-top: 80px;
+        .secondary:hover{
+            background:rgba(255,255,255,0.1);
         }
 
-        .stat-box {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            padding: 35px;
-            border-radius: 24px;
-            backdrop-filter: blur(12px);
-            transition: 0.4s ease;
+        .hero-image img{
+            width:100%;
+            border-radius:30px;
+            box-shadow:0 20px 50px rgba(0,0,0,0.5);
         }
 
-        .stat-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        section{
+            padding:100px 10%;
         }
 
-        .stat-box h2 {
-            font-size: 42px;
-            color: #38bdf8;
-            margin-bottom: 10px;
+        .section-title{
+            text-align:center;
+            font-size:50px;
+            margin-bottom:70px;
         }
 
-        .stat-box p {
-            color: #cbd5e1;
+        .about{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:50px;
+            align-items:center;
         }
 
-        .section {
-            padding: 120px 8%;
+        .about img{
+            width:100%;
+            border-radius:25px;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 52px;
-            margin-bottom: 70px;
-            font-weight: 800;
+        .about-text p{
+            color:#cbd5e1;
+            line-height:1.9;
+            font-size:18px;
         }
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+            gap:35px;
         }
 
-        .project-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 28px;
-            overflow: hidden;
-            transition: 0.5s ease;
-            backdrop-filter: blur(10px);
+        .project-card{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.1);
+            backdrop-filter:blur(15px);
+            padding:35px;
+            border-radius:25px;
+            transition:0.4s;
         }
 
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        .project-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 35px rgba(0,0,0,0.5);
         }
 
-        .project-top {
-            height: 180px;
-            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
+        .project-card img{
+            width:100%;
+            border-radius:18px;
+            margin-bottom:25px;
         }
 
-        .project-content {
-            padding: 30px;
+        .project-card h2{
+            margin-bottom:15px;
+            color:#38bdf8;
         }
 
-        .project-content h3 {
-            font-size: 28px;
-            margin-bottom: 18px;
+        .project-card p{
+            color:#cbd5e1;
+            line-height:1.8;
         }
 
-        .project-content p {
-            color: #cbd5e1;
-            line-height: 1.8;
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
         }
 
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 50px;
+        .skill{
+            padding:16px 28px;
+            border-radius:14px;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.1);
+            transition:0.3s;
         }
 
-        .skill {
-            padding: 14px 28px;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s ease;
-            font-weight: 500;
+        .skill:hover{
+            background:linear-gradient(to right,#2563eb,#7c3aed);
+            transform:translateY(-5px);
         }
 
-        .skill:hover {
-            background: linear-gradient(to right, #38bdf8, #8b5cf6);
-            transform: scale(1.08);
+        .contact{
+            text-align:center;
+            background:rgba(255,255,255,0.05);
+            padding:70px;
+            border-radius:30px;
+            border:1px solid rgba(255,255,255,0.1);
         }
 
-        .contact {
-            text-align: center;
-            padding: 120px 20px;
+        .contact p{
+            color:#cbd5e1;
+            margin-bottom:30px;
+            font-size:18px;
         }
 
-        .contact h2 {
-            font-size: 56px;
-            margin-bottom: 25px;
+        footer{
+            text-align:center;
+            padding:40px;
+            color:#94a3b8;
+            border-top:1px solid rgba(255,255,255,0.1);
         }
 
-        .contact p {
-            max-width: 750px;
-            margin: auto;
-            color: #cbd5e1;
-            line-height: 1.8;
-            font-size: 19px;
-        }
+        @media(max-width:1000px){
 
-        .contact-btn {
-            margin-top: 40px;
-            display: inline-block;
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            color: #94a3b8;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 46px;
+            .hero{
+                grid-template-columns:1fr;
             }
 
-            .hero p {
-                font-size: 18px;
+            .about{
+                grid-template-columns:1fr;
             }
 
-            .section-title {
-                font-size: 38px;
+            .hero-text{
+                text-align:center;
             }
 
-            .contact h2 {
-                font-size: 42px;
+            .buttons{
+                justify-content:center;
             }
 
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
         }
+
+        @media(max-width:768px){
+
+            .hero-text h1{
+                font-size:50px;
+            }
+
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+        }
+
     </style>
+
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Raghunath.dev</div>
+    <nav>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+        <div class="logo">
+            RAGHU
         </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
     </nav>
 
-    <section class="hero" id="home">
+    <header>
 
-        <div class="tag">
-            SOFTRNEXT INTERNSHIP • PYTHON AUTOMATION DEVELOPER
+        <div class="hero">
+
+            <div class="hero-text">
+
+                <h3>
+                    SOFTWARE DEVELOPER • PYTHON • CYBERSECURITY
+                </h3>
+
+                <h1>
+                    Building Secure & Creative Software Solutions
+                </h1>
+
+                <p>
+                    Passionate developer focused on automation tools,
+                    encryption systems, secure applications,
+                    and modern web development experiences.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn primary">
+                        View Projects
+                    </a>
+
+                    <a href="https://github.com/pailaraghunathreddy21-afk" class="btn secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Developer Workspace">
+
+            </div>
+
         </div>
 
-        <h1>
-            Building <span class="gradient-text">Professional Automation Tools</span>
-            With Python & Modern Web Technologies
+    </header>
+
+    <section id="about">
+
+        <h1 class="section-title">
+            About Me
         </h1>
 
-        <p>
-            Hi, I'm Paila Raghunath Reddy 👋
-            A passionate beginner developer currently working on real-world internship projects.
-            I developed an Automated File Organizer using Python with advanced features like
-            logging systems, duplicate handling, command-line arguments, dry-run simulation,
-            and GitHub integration.
-        </p>
+        <div class="about">
 
-        <div class="hero-buttons">
-            <a href="https://github.com/pailaraghunathreddy21-afk" target="_blank" class="btn primary-btn">
-                Explore GitHub
-            </a>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Coding Setup">
 
-            <a href="#projects" class="btn secondary-btn">
-                View Projects
-            </a>
-        </div>
+            <div class="about-text">
 
-        <div class="stats">
+                <p>
+                    I am an aspiring software developer passionate about
+                    Python programming, cybersecurity, automation systems,
+                    and modern web development.
+                </p>
 
-            <div class="stat-box">
-                <h2>1+</h2>
-                <p>Internship Projects Completed</p>
-            </div>
+                <br>
 
-            <div class="stat-box">
-                <h2>10+</h2>
-                <p>Git & Python Concepts Learned</p>
-            </div>
+                <p>
+                    During my internship journey, I built secure and professional
+                    software projects including an Automated File Organizer
+                    and an AES-256 Secure Password Manager.
+                </p>
 
-            <div class="stat-box">
-                <h2>100%</h2>
-                <p>Hands-On Practical Learning</p>
-            </div>
-
-            <div class="stat-box">
-                <h2>24/7</h2>
-                <p>Passion For Technology</p>
             </div>
 
         </div>
 
     </section>
 
-    <section class="section" id="projects">
+    <section id="projects">
 
-        <h2 class="section-title gradient-text">Featured Projects</h2>
+        <h1 class="section-title">
+            Featured Projects
+        </h1>
 
         <div class="projects">
 
             <div class="project-card">
-                <div class="project-top">🐍</div>
 
-                <div class="project-content">
-                    <h3>Automated File Organizer</h3>
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop" alt="Automation Project">
 
-                    <p>
-                        A professional Python automation project that scans directories,
-                        categorizes files automatically, handles duplicate names safely,
-                        generates activity logs, supports dry-run mode, and improves
-                        productivity using intelligent file management.
-                    </p>
-                </div>
+                <h2>
+                    📂 Automated File Organizer
+                </h2>
+
+                <p>
+                    Developed a professional automation system using Python
+                    that scans directories, categorizes files,
+                    resolves duplicates, and generates logs automatically.
+                </p>
+
             </div>
 
             <div class="project-card">
-                <div class="project-top">⚡</div>
 
-                <div class="project-content">
-                    <h3>Git & GitHub Workflow</h3>
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop" alt="Cybersecurity">
 
-                    <p>
-                        Learned complete developer workflows including repository creation,
-                        version control, commits, merge conflict handling, authentication,
-                        branch management, and professional GitHub deployment.
-                    </p>
-                </div>
-            </div>
+                <h2>
+                    🔐 Secure Password Manager
+                </h2>
 
-            <div class="project-card">
-                <div class="project-top">🌐</div>
+                <p>
+                    Built a secure CLI password manager with AES-256 encryption,
+                    PBKDF2-HMAC authentication,
+                    brute-force protection, and encrypted vault storage.
+                </p>
 
-                <div class="project-content">
-                    <h3>Modern Developer Portfolio</h3>
-
-                    <p>
-                        Designed a premium responsive portfolio website using advanced HTML & CSS.
-                        Includes modern glassmorphism UI, gradients, animations, responsive layouts,
-                        and interactive user experience.
-                    </p>
-                </div>
             </div>
 
         </div>
 
     </section>
 
-    <section class="section" id="skills">
+    <section id="skills">
 
-        <h2 class="section-title gradient-text">Technical Skills</h2>
+        <h1 class="section-title">
+            Technical Skills
+        </h1>
 
-        <div class="skills-container">
+        <div class="skills">
+
             <div class="skill">Python</div>
-            <div class="skill">HTML5</div>
-            <div class="skill">CSS3</div>
-            <div class="skill">Git</div>
-            <div class="skill">GitHub</div>
+            <div class="skill">Cybersecurity</div>
+            <div class="skill">Encryption</div>
             <div class="skill">Automation</div>
-            <div class="skill">Command Line</div>
-            <div class="skill">VS Code</div>
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Responsive Design</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">JSON</div>
+            <div class="skill">CLI Development</div>
+
         </div>
 
     </section>
 
-    <section class="contact" id="contact">
+    <section id="contact">
 
-        <h2 class="gradient-text">Let's Build Something Amazing 🚀</h2>
+        <div class="contact">
 
-        <p>
-            I'm continuously learning software development, automation, and web technologies.
-            Currently focused on building real-world internship projects and improving my
-            development skills every day.
-        </p>
+            <h1 class="section-title">
+                Let's Connect
+            </h1>
 
-        <a href="https://github.com/pailaraghunathreddy21-afk" target="_blank" class="btn primary-btn contact-btn">
-            Connect On GitHub
-        </a>
+            <p>
+                Open to internships, collaborations,
+                and software development opportunities.
+            </p>
+
+            <a href="https://github.com/pailaraghunathreddy21-afk" class="btn primary">
+                Visit My GitHub
+            </a>
+
+        </div>
 
     </section>
 
     <footer>
-        © 2026 Paila Raghunath Reddy • Python Developer Portfolio • Built With HTML & CSS
+
+        © 2026 RAGHU • Professional Internship Portfolio
+
     </footer>
 
 </body>
+
 </html>
+```
