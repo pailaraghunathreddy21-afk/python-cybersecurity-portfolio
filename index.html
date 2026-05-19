@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Raghu | Cybersecurity Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raghu | Cybersecurity & Python Developer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         *{
             margin:0;
             padding:0;
@@ -21,455 +17,471 @@
 
         body{
             font-family:'Poppins',sans-serif;
-            background:#020617;
+            background:#0b1120;
             color:white;
             overflow-x:hidden;
         }
 
         body::before{
-            content:'';
+            content:"";
             position:fixed;
             width:500px;
             height:500px;
-            background:#2563eb;
-            filter:blur(180px);
-            top:-150px;
+            background:#00f5ff22;
+            border-radius:50%;
+            top:-200px;
             left:-150px;
-            opacity:0.35;
+            filter:blur(150px);
             z-index:-1;
         }
 
         body::after{
-            content:'';
+            content:"";
             position:fixed;
             width:500px;
             height:500px;
-            background:#7c3aed;
-            filter:blur(180px);
-            bottom:-150px;
+            background:#7c3aed22;
+            border-radius:50%;
+            bottom:-200px;
             right:-150px;
-            opacity:0.35;
+            filter:blur(150px);
             z-index:-1;
         }
 
-        nav{
-            width:100%;
+        header{
             position:fixed;
+            width:100%;
             top:0;
             left:0;
-            padding:22px 10%;
+            z-index:1000;
+            backdrop-filter:blur(12px);
+            background:rgba(10,15,30,0.7);
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        nav{
+            width:90%;
+            margin:auto;
             display:flex;
             justify-content:space-between;
             align-items:center;
-            background:rgba(2,6,23,0.7);
-            backdrop-filter:blur(18px);
-            border-bottom:1px solid rgba(255,255,255,0.08);
-            z-index:1000;
+            padding:20px 0;
         }
 
         .logo{
-            font-size:30px;
+            font-size:1.6rem;
             font-weight:700;
-            color:#38bdf8;
+            color:#00f5ff;
         }
 
-        nav ul{
+        .nav-links{
             display:flex;
-            list-style:none;
-            gap:30px;
+            gap:25px;
         }
 
-        nav ul li a{
+        .nav-links a{
             text-decoration:none;
             color:white;
             transition:0.3s;
             font-weight:500;
         }
 
-        nav ul li a:hover{
-            color:#38bdf8;
+        .nav-links a:hover{
+            color:#00f5ff;
         }
 
-        header{
-            min-height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            padding:120px 10%;
+        section{
+            width:90%;
+            margin:auto;
+            padding:110px 0;
         }
 
         .hero{
-            display:grid;
-            grid-template-columns:1fr 450px;
-            gap:70px;
+            min-height:100vh;
+            display:flex;
             align-items:center;
+            justify-content:space-between;
+            gap:50px;
+            flex-wrap:wrap;
+        }
+
+        .hero-text{
+            flex:1;
         }
 
         .hero-text h3{
-            color:#38bdf8;
-            margin-bottom:20px;
-            letter-spacing:2px;
+            color:#00f5ff;
+            font-size:1.1rem;
+            margin-bottom:10px;
         }
 
         .hero-text h1{
-            font-size:78px;
-            line-height:1.1;
-            margin-bottom:25px;
+            font-size:4rem;
+            line-height:1.2;
+            margin-bottom:20px;
         }
 
         .hero-text span{
-            background:linear-gradient(to right,#38bdf8,#7c3aed);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            color:#00f5ff;
         }
 
         .hero-text p{
-            font-size:20px;
             color:#cbd5e1;
-            line-height:1.9;
-            margin-bottom:40px;
+            line-height:1.8;
+            max-width:650px;
+            margin-bottom:30px;
         }
 
-        .buttons{
+        .btn-group{
             display:flex;
             gap:20px;
             flex-wrap:wrap;
         }
 
         .btn{
-            padding:16px 34px;
-            border-radius:14px;
+            padding:14px 28px;
+            border-radius:10px;
             text-decoration:none;
             font-weight:600;
             transition:0.3s;
         }
 
-        .primary{
-            background:linear-gradient(to right,#2563eb,#7c3aed);
-            color:white;
+        .btn-primary{
+            background:#00f5ff;
+            color:#000;
         }
 
-        .primary:hover{
-            transform:translateY(-5px);
+        .btn-primary:hover{
+            transform:translateY(-3px);
+            box-shadow:0 0 20px #00f5ff88;
         }
 
-        .secondary{
-            border:1px solid rgba(255,255,255,0.15);
-            color:white;
+        .btn-secondary{
+            border:1px solid #00f5ff;
+            color:#00f5ff;
+        }
+
+        .btn-secondary:hover{
+            background:#00f5ff;
+            color:black;
+        }
+
+        .hero-card{
+            flex:1;
             background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            padding:40px;
+            border-radius:25px;
+            backdrop-filter:blur(15px);
+            box-shadow:0 10px 40px rgba(0,0,0,0.3);
         }
 
-        .secondary:hover{
-            background:rgba(255,255,255,0.1);
+        .hero-card h2{
+            margin-bottom:20px;
+            color:#00f5ff;
         }
 
-        .hero-image img{
-            width:100%;
-            border-radius:30px;
-            box-shadow:0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        section{
-            padding:100px 10%;
+        .hero-card p{
+            color:#cbd5e1;
+            line-height:1.8;
         }
 
         .section-title{
             text-align:center;
-            font-size:52px;
             margin-bottom:70px;
+        }
+
+        .section-title h2{
+            font-size:2.7rem;
+            color:#00f5ff;
+            margin-bottom:10px;
+        }
+
+        .section-title p{
+            color:#94a3b8;
+        }
+
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .skill-card{
+            background:rgba(255,255,255,0.05);
+            padding:30px;
+            border-radius:20px;
+            border:1px solid rgba(255,255,255,0.08);
+            transition:0.3s;
+        }
+
+        .skill-card:hover{
+            transform:translateY(-10px);
+            border-color:#00f5ff;
+        }
+
+        .skill-card h3{
+            margin-bottom:15px;
+            color:#00f5ff;
+        }
+
+        .skill-card p{
+            color:#cbd5e1;
+            line-height:1.7;
         }
 
         .projects{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-            gap:35px;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:30px;
         }
 
         .project-card{
             background:rgba(255,255,255,0.05);
+            padding:30px;
+            border-radius:20px;
             border:1px solid rgba(255,255,255,0.08);
-            backdrop-filter:blur(15px);
-            padding:35px;
-            border-radius:25px;
-            transition:0.4s;
+            transition:0.3s;
         }
 
         .project-card:hover{
             transform:translateY(-10px);
-            box-shadow:0 20px 40px rgba(0,0,0,0.5);
+            border-color:#00f5ff;
         }
 
-        .project-card img{
-            width:100%;
-            border-radius:18px;
-            margin-bottom:25px;
-            height:220px;
-            object-fit:cover;
-        }
-
-        .project-card h2{
+        .project-card h3{
             margin-bottom:15px;
-            color:#38bdf8;
+            color:#00f5ff;
         }
 
         .project-card p{
             color:#cbd5e1;
             line-height:1.8;
+            margin-bottom:20px;
         }
 
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:20px;
-        }
-
-        .skill{
-            padding:16px 28px;
-            border-radius:14px;
-            background:rgba(255,255,255,0.05);
-            border:1px solid rgba(255,255,255,0.08);
-            transition:0.3s;
-        }
-
-        .skill:hover{
-            background:linear-gradient(to right,#2563eb,#7c3aed);
-            transform:translateY(-5px);
-        }
-
-        .contact{
+        .contact-box{
             text-align:center;
             background:rgba(255,255,255,0.05);
-            padding:70px;
-            border-radius:30px;
+            padding:60px 30px;
+            border-radius:25px;
             border:1px solid rgba(255,255,255,0.08);
         }
 
-        .contact p{
+        .contact-box h2{
+            font-size:2.5rem;
+            color:#00f5ff;
+            margin-bottom:20px;
+        }
+
+        .contact-box p{
+            max-width:700px;
+            margin:auto;
             color:#cbd5e1;
-            margin-bottom:30px;
-            font-size:18px;
+            line-height:1.8;
+            margin-bottom:35px;
         }
 
         footer{
             text-align:center;
-            padding:40px;
+            padding:30px;
             color:#94a3b8;
             border-top:1px solid rgba(255,255,255,0.08);
         }
 
-        @media(max-width:1000px){
+        @media(max-width:900px){
 
             .hero{
-                grid-template-columns:1fr;
-            }
-
-            .hero-text{
+                flex-direction:column;
                 text-align:center;
+                padding-top:120px;
             }
-
-            .buttons{
-                justify-content:center;
-            }
-
-        }
-
-        @media(max-width:768px){
 
             .hero-text h1{
-                font-size:50px;
+                font-size:3rem;
             }
 
-            nav{
-                flex-direction:column;
+            .nav-links{
                 gap:15px;
+                font-size:0.9rem;
             }
 
-            nav ul{
-                flex-wrap:wrap;
+            .btn-group{
                 justify-content:center;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
+<header>
     <nav>
+        <div class="logo">RaghuTech</div>
 
-        <div class="logo">
-            Raghu
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
     </nav>
+</header>
 
-    <header>
+<section class="hero" id="home">
 
-        <div class="hero">
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
 
-            <div class="hero-text">
+        <h1>RaghuTech <br> <span>Cybersecurity & Python Developer</span></h1>
 
-                <h3>
-                    PYTHON • CYBERSECURITY • AUTOMATION
-                </h3>
+        <p>
+            Passionate developer focused on cybersecurity, Python automation,
+            async API development, and modern web technologies.
+            I build secure, scalable, and professional applications while continuously
+            improving my software engineering skills.
+        </p>
 
-                <h1>
-                    Building <span>Secure</span> & Modern Software Solutions
-                </h1>
-
-                <p>
-                    Passionate developer specializing in cybersecurity,
-                    automation systems, encryption tools,
-                    and professional web scraping technologies.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#projects" class="btn primary">
-                        Explore Projects
-                    </a>
-
-                    <a href="https://github.com/pailaraghunathreddy21-afk" class="btn secondary">
-                        GitHub Profile
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-
-                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop">
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <section id="projects">
-
-        <h1 class="section-title">
-            Featured Projects
-        </h1>
-
-        <div class="projects">
-
-            <div class="project-card">
-
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop">
-
-                <h2>
-                    📂 Automated File Organizer
-                </h2>
-
-                <p>
-                    Professional Python automation system that categorizes files,
-                    handles duplicate detection,
-                    generates logs,
-                    and organizes directories efficiently.
-                </p>
-
-            </div>
-
-            <div class="project-card">
-
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop">
-
-                <h2>
-                    🔐 AES-256 Password Manager
-                </h2>
-
-                <p>
-                    Secure command-line password manager built using AES-256 encryption,
-                    PBKDF2 authentication,
-                    brute-force protection,
-                    and encrypted JSON vault storage.
-                </p>
-
-            </div>
-
-            <div class="project-card">
-
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-
-                <h2>
-                    🌐 Professional Web Scraper
-                </h2>
-
-                <p>
-                    Advanced web scraping engine featuring User-Agent rotation,
-                    retry mechanisms,
-                    anti-bot handling,
-                    structured data extraction,
-                    and CSV/JSON export systems.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="skills">
-
-        <h1 class="section-title">
-            Technical Skills
-        </h1>
-
-        <div class="skills">
-
-            <div class="skill">Python</div>
-            <div class="skill">Cybersecurity</div>
-            <div class="skill">Web Scraping</div>
-            <div class="skill">Automation</div>
-            <div class="skill">Encryption</div>
-            <div class="skill">Git & GitHub</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JSON</div>
-            <div class="skill">CLI Development</div>
-
-        </div>
-
-    </section>
-
-    <section id="contact">
-
-        <div class="contact">
-
-            <h1 class="section-title">
-                Let's Connect
-            </h1>
-
-            <p>
-                Open to internships, collaborations,
-                and cybersecurity development opportunities.
-            </p>
-
-            <a href="https://github.com/pailaraghunathreddy21-afk" class="btn primary">
-                Visit My GitHub
+        <div class="btn-group">
+            <a href="https://github.com/pailaraghunathreddy21-afk" class="btn btn-primary">
+                View GitHub
             </a>
 
+            <a href="#projects" class="btn btn-secondary">
+                View Projects
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <h2>Professional Summary</h2>
+
+        <p>
+            Currently building real-world Python and cybersecurity projects including:
+            password managers, web scrapers, file organizers,
+            async GitHub API wrappers, and professional portfolio websites.
+            Focused on backend engineering, API systems, automation, and security tools.
+        </p>
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <div class="section-title">
+        <h2>Skills</h2>
+        <p>Technologies and tools I work with</p>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>Python Development</h3>
+            <p>
+                Advanced Python programming, OOP, automation,
+                async programming, APIs, and scripting.
+            </p>
         </div>
 
-    </section>
+        <div class="skill-card">
+            <h3>Cybersecurity</h3>
+            <p>
+                Security fundamentals, password management,
+                vulnerability awareness, and secure coding practices.
+            </p>
+        </div>
 
-    <footer>
+        <div class="skill-card">
+            <h3>Web Development</h3>
+            <p>
+                HTML, CSS, responsive design,
+                portfolio development, and UI improvements.
+            </p>
+        </div>
 
-        © 2026 Raghu • Cybersecurity & Python Portfolio
+        <div class="skill-card">
+            <h3>Async APIs</h3>
+            <p>
+                aiohttp, asynchronous workflows,
+                GitHub API integration, pagination, and rate limiting.
+            </p>
+        </div>
 
-    </footer>
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <div class="section-title">
+        <h2>Projects</h2>
+        <p>Some professional projects I built</p>
+    </div>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Password Manager</h3>
+
+            <p>
+                Secure password management application using Python
+                with encrypted local storage and JSON-based vault handling.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Web Scraper</h3>
+
+            <p>
+                Python-based scraper for extracting structured data
+                from websites with automation and file export support.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>File Organizer</h3>
+
+            <p>
+                Automated file management system that organizes
+                files into folders based on type and extension.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Async GitHub API Wrapper</h3>
+
+            <p>
+                Production-style asynchronous GitHub API wrapper
+                built using aiohttp with pagination and error handling.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="contact-box">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            Open to internships, freelance opportunities,
+            cybersecurity collaborations, and backend development projects.
+        </p>
+
+        <a href="https://github.com/pailaraghunathreddy21-afk" class="btn btn-primary">
+            Connect on GitHub
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 RaghuTech • Cybersecurity & Python Developer Portfolio
+</footer>
 
 </body>
-
 </html>
